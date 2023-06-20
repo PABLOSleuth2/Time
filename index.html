@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Current Time</title>
+  </head>
+  <body>
+    <p id="currentTime"></p>
+    <script>
+      function updateTime() {
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+        var timeString = hours + ":" + minutes + ":" + seconds;
+        document.getElementById("currentTime").innerHTML = timeString;
+      }
+      setInterval(updateTime, 1000);
+    </script>
+  </body>
+</html>
